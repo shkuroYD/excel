@@ -12,110 +12,98 @@
 }
 
 body {
-	align-items: center;
-	justify-content: center;
 	font-family: Gerbera, sans-serif;
-	font-size: 34px;
-	font-weight: normal;
-	height: 100vh;
-	width: 100vw;
-	border: none;
-	outline: none;
-	overflow: auto;
+}
+
+/*Определяет ширину и внешние отступы данных классов*/
+.default-container {
+	width: 888px;
+	margin: 0 auto;
 }
 
 /*Первая часть страницы с темной полосой и картикной*/
-header {
-	display: flex;
-	flex-direction: column;
-	background-image: url(../img/Hero.png);
-	background-repeat: no-repeat;
+.header {
 	height: 384px;
-	background-size: 100% 100%;
-	align-items: center;
-	width: 100vw;
+	width: 100%;
+	background-image: url(../img/Hero.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /*Темная полоса с логотипом и выбором города*/
 .top-menu {
 	height: 72px;
-	width: 100vw;
+	width: 100%;
 	background-color: rgba(40, 50, 60, 0.8);
-	background-size: cover;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.top-menu-container {
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 
-.logo-city {
-	display: flex;
-	width: 1300px;
-	padding: 0 178px;
-}
-
 /*Логотип ренесанс-здоровье*/
-.logo {
-	display: inline-block;
-	margin: 24px 0 0 28px;
+.top-menu-logo {
+	cursor: pointer;
 }
 
-.city {
-	display: inline-block;
-	margin: 12px 0px 12px 237.3px;
-	width: 432px;
-	height: 48px;
+.top-menu-select-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 /*Выбор города*/
-.city select {
-	font-family: Gerbera, sans-serif;
-	font-size: 16px;
-	background-color: rgba(40, 50, 60, 0);
-	color: white;
+.top-menu-select {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	height: 100%;
-	width: 100%;
-	padding-right: 40px;
-	top: 0;
-	text-align: right;
+	background: none;
+	color: #B5BDC8;
+	font-family: Gerbera, sans-serif;
+	font-size: 16px;
+	width: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	appearance: none;
 }
-
-.city select option {
+/*Цвет слов в выпадающем списке*/
+.top-menu-select option {
 	color: black;
+}
+/*Замена стрелочки по умолчанию у селектора*/
+.top-menu-select-arrow {
+	color: white;
 }
 
 /*Картинка с телефоном + заголовки с кнопкой*/
 .hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 1300px;
 	color: white;
-	margin-top: 48px;
-	padding: 0 178px 48px 178px;
 }
 
-h1 {
+.hero-title {
 	font-size: 34px;
-	font-weight: normal;
-	display: inline-block;
 	line-height: 48px;
-	margin: 0 67px 0 28px;
+	margin-top: 48px;
 }
 
-.hero p {
-	display: inline-block;
-	margin: 24px 411px 0 28px;
+.hero-description {
+	width: 506px;
+	margin-top: 24px;
 	font-size: 16px;
 	line-height: 24px;
 }
 
 /*Кнопка "Выбрать пакет"*/
 .click-suite {
-	display: inline-block;
-	margin: 48px 0 0 28px;
+	margin-top: 48px;
 	background-color: #50287D;
 	height: 48px;
 	border-radius: 24px;
@@ -133,44 +121,31 @@ h1 {
 	transition: font-size 1s;
 }
 
-main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+/*Main*/
 
 /*Маркетинговый лозунг с пояснением*/
-.slogan {
-	display: flex;
-	flex-direction: column;
-	width: 1300px;
-	height: 361px;
-	padding: 72px 178px;
+.main {
+	margin-top: 72px;
 }
-
-.slogan h2 {
-	display: inline-block;
-	margin: 0 28px;
+.slogan-title {
+	color: #28323C;
 	font-size: 34px;
-	width: 888px;
-	font-weight: normal;
 	line-height: 48px;
 }
 
-.slogan p {
+.slogan-description {
+	width: 560px;
 	line-height: 24px;
-	margin: 48px 356px 0 28px;
+	margin-top: 48px;
 	font-size: 16px;
+	color: #78828C;
 }
 
 /*Секцтя с тарифами*/
 .pricing {
-	display: flex;
-	flex-direction: column;
-	padding: 48px 178px;
-	font-weight: normal;
 	font-size: 16px;
+	margin-top: 120px;
+	line-height: 24px;
 }
 
 .pricing ul {
@@ -178,86 +153,79 @@ main {
 }
 
 /*Блок с кнопками*/
-.months {
+.pricing-months {
+	margin: 0 auto;
+	display: flex;
 	align-items: center;
+	justify-content: center;
 	background-color: #F3F5F7;
 	border-radius: 36px;
-	display: flex;
-	min-height: 72px;
+	height: 72px;
 	width: 496px;
-	margin: 0 223.5px;
+	flex-grow: 1;
 }
 
 /*Кнопки с выбором месяца*/
-.months button {
-	width: 165px;
+.pricing-months button {
 	background-color: transparent;
 	font-family: Gerbera, sans-serif;
 	font-size: 16px;
 	border: none;
-	flex-grow: 1;
 }
 
-.one-month {
-	margin: 5px 16px 5px 5px;
+.pricing-months-one {
+	width: 139px;
+	margin: 5px auto;
 	border-radius: 36px 0 0 36px;
 }
 
-.twelve-month {
-	margin: 5px 5px 5px 16px;
+.pricing-months-three {
+	width: 150px;
+}
+
+.pricing-months-twelve {
+	width: 160px;
+	margin: 5px auto;
 	border-radius: 0 36px 36px 0;
 }
 
-.months button:focus {
+.pricing-months button:focus {
+	background-color: white;
 	height: 62px;
 	border: 3px solid #00D2FF;
+	box-shadow: 0px 4px 6px rgba(26, 65, 101, 0.15);
 	border-radius: 31px;
 }
 
 /*Тарифы*/
-.tarif-price {
+.pricing-tarif {
 	display: flex;
-	margin: 24px 27.5px 0 27.5px;
 	height: 432px;
-	border: 1px solid #000;
-	width: 888px;
+	margin: 24px auto 0;
 }
-/*Базовый тариф*/
-
-.tarif-price h3 {
-	font-size: 16px;
-	font-weight: normal;
-	display: inline-block;
-	color: #96A0AA;
-	margin: 24px 43px 0 24px;
+/*Блок без кнопки*/
+.tarif-container {
+	margin: 24px 24px 0;
+	height: 340px;
 }
 
-.tarif-price h4 {
-	font-weight: normal;
-	display: inline-block;
-	color: #28323C;
-	font-size: 34px;
-	line-height: 72px;
-	height: 72px;
-	margin: 0 24px;
-}
-
-.basic {
-	box-shadow: 0 12px 24px rgba(26, 65, 101, 0.25);
-}
-
-.basic, .advanced, .full {
+/*Стилизация всех тарифов*/
+.pricing-tarif article {
 	width: 280px;
-	border: 1px solid #000;
+	border: 1px solid #E6F0FA;
+	margin: 0 auto;
 }
 
-.advanced {
-	margin: 0 24px;
+.pricing-tarif-basic-title,
+.pricing-tarif-advanced-title,
+.pricing-tarif-full-title {
+	color: #96A0AA;
 }
 
-.basic-popular {
+/*Самый популярный-слоган базового тарифа*/
+.pricing-tarif-basic-slogan {
 	display: inline-block;
-	line-height: 24px;
+	margin-left: 35px;
 	border-radius: 12px;
 	width: 124px;
 	height: 24px;
@@ -267,29 +235,36 @@ main {
 	background-size: cover;
 }
 
-.tarif-price ul {
-	margin: 24px 24px 0 24px;
-	list-style-position: inside;
-	line-height: 24px;
+/*Названия тарифов*/
+.pricing-tarif-advanced-title,
+.pricing-tarif-full-title {
+	color: #96A0AA;
 }
 
-.tarif-price ul li {
+/*Цена тарифов*/
+.pricing-tarif-basic-price,
+.pricing-tarif-advanced-price,
+.pricing-tarif-full-price {
+	font-weight: normal;
+	color: #28323C;
+	font-size: 34px;
+	line-height: 72px;
+}
+
+/*Стилизация списков для всех тарифов*/
+.pricing-tarif ul {
+	list-style-position: outside;
+	line-height: 24px;
+	margin-left: 24px;
+}
+
+/*Стилизация элементов списка для всех тарифов*/
+.pricing-tarif ul li {
 	margin-bottom: 24px;
 }
 
-.basic ul {
-	margin-bottom: 124px;
-}
-
-.advanced ul {
-	margin-bottom: 80px;
-}
-
-.full ul {
-	margin-bottom: 32px;
-}
-/*Стилизация всех кнопок*/
-.tarif-price button {
+/*Стилизация кнопки для всех тарифов*/
+.pricing-tarif button {
 	font-family: Gerbera, sans-serif;
 	background-color: transparent;
 	font-size: 16px;
@@ -298,7 +273,7 @@ main {
 	cursor: pointer;
 }
 
-.tarif-price button:focus {
+.pricing-tarif button:focus {
 	background-color: #50287D;
 	justify-self: center;
 	height: 14%;

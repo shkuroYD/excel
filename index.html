@@ -2,75 +2,84 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Tsar Landing</title>
-	<link rel="stylesheet" href="../trushinRepo/css/style.css">
+	<title>TrushinRepo</title>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	<header>
+
+	<header class="header">
 		<section class="top-menu">
-			<div class="logo-city">
-				<div class="logo">
-					<img src="../trushinRepo/img/Horizontal.png" alt="Логотип">
-				</div>
-				<div class="city">
-					<select tabindex="1" name="city">
+			<div class="top-menu-container default-container">
+				<img class="top-menu-logo" src="../img/Horizontal.png" alt="Логотип">
+				<div class="top-menu-select-container">
+					<select class="top-menu-select" tabindex="1" name="city">
 						<option selected value="moscow">Москва</option>
 						<option value="spb">Санкт-Петербург</option>
 						<option value="samara">Самара</option>
 						<option value="others">Другие регионы</option>
 					</select>
+					<div class="top-menu-select-arrow">▼</div>
 				</div>
 			</div>
 		</section>
-		<section class="hero">
-			<h1>Персональная медицинская помощь у вас дома</h1>
-			<p>Получайте квалифицированную медицинскую помощь не выходя из дома</p>
+		<section class="hero default-container">
+			<p class="hero-title">Персональная медицинская помощь у вас дома</p>
+			<p class="hero-description">Получайте квалифицированную медицинскую помощь не выходя из дома</p>
 			<button tabindex="2" class="click-suite" type="submit">Выбрать пакет</button>
 		</section>
 	</header>
-	<main>
-		<section class="slogan">
-			<h2>Вызов врачей на дом без лишних посещений поликлиник. Доставка лекарств из онлайн-аптеки</h2>
-			<p>Срочные вопросы, расшифровка анализов и обследований, второе мнение врачей из онлайн-консультации с врачами круглосуточно из дома.</p>
+
+
+	<main class="main">
+		<section class="slogan default-container">
+			<p class="slogan-title">Вызов врачей на дом без лишних посещений поликлиник. Доставка лекарств из онлайн-аптеки</p>
+			<p class="slogan-description">Срочные вопросы, расшифровка анализов и обследований, второе мнение врачей из онлайн-консультации с врачами круглосуточно из дома.</p>
 		</section>
-		<section class="pricing">
-			<div class="months">
-				<button class="one-month" type="submit">На 1 месяц</button>
-				<button class="three-month" type="submit">На 3 месяца</button>
-				<button class="twelve-month" type="submit">На 12 месяцев</button>
+		<section class="pricing default-container">
+			<div class="pricing-months">
+				<button class="pricing-months-one" type="submit">На 1 месяц</button>
+				<button class="pricing-months-three" type="submit">На 3 месяца</button>
+				<button class="pricing-months-twelve" type="submit">На 12 месяцев</button>
 			</div>
-			<div class="tarif-price">
-				<article class="basic">
-					<h3 class="name-basic">Базовый</h3>
-					<p class="basic-popular">Самый популярный</p>
-					<h4 class="price-basic">900 Р</h4>
-					<ul>
-						<li>Консультация с врачами онлайн без ограничений</li>
-						<li>Доставка лекарств</li>
+			<div class="pricing-tarif">
+				<article class="pricing-tarif-basic">
+					<div class="pricing-tarif-basic-container tarif-container">
+						<span class="pricing-tarif-basic-title">Базовый</span>
+						<span class="pricing-tarif-basic-slogan">Самый популярный</span>
+						<p class="pricing-tarif-basic-price">900 Р</p>
+						<ul class="pricing-tarif-basic-description">
+							<li>Консультация с врачами онлайн без ограничений</li>
+							<li>Доставка лекарств</li>
 					</ul>
+					</div>
 					<button>Выбрать на 1 месяц</button>
 				</article>
-				<article class="advanced">
-					<h3 class="name-advanced">Расширенный</h3>
-					<h4 class="price-advanced">5 200 Р</h4>
-					<ul>
-						<li>Консультация с врачами онлайн без ограничений</li>
-						<li>Доставка лекарств</li>
-						<li>Вызовы врачей на дом</li>
-					</ul>
+				<article class="pricing-tarif-advanced">
+					<div class="pricing-tarif-advanced-container tarif-container">
+						<span class="pricing-tarif-advanced-title">Расширенный</span>
+						<p class="pricing-tarif-advanced-price">5 200 Р</p>
+						<ul class="pricing-tarif-advanced-description">
+							<li>Консультация с врачами онлайн без ограничений</li>
+							<li>Доставка лекарств</li>
+							<li>Вызовы врачей на дом</li>
+						</ul>
+					</div>
 					<button>Выбрать на 1 месяц</button>
 				</article>
-				<article class="full">
-					<h3 class="name-full">Полный</h3>
-					<h4 class="price-full">8 200 Р</h4>
-					<ul>
-						<li>Консультация с врачами онлайн без ограничений</li>
-						<li>Доставка лекарств</li>
-						<li>Вызовы врачей на дом</li>
-						<li>Страховка от COVID-19</li>
-					</ul>
+				<article class="pricing-tarif-full">
+					<div class="pricing-tarif-full-container tarif-container">
+						<p class="pricing-tarif-full-title">Полный</p>
+						<p class="pricing-tarif-full-price">8 200 Р</p>
+						<ul class="pricing-tarif-full-description">
+							<li>Консультация с врачами онлайн без ограничений</li>
+							<li>Доставка лекарств</li>
+							<li>Вызовы врачей на дом</li>
+							<li>Страховка от COVID-19</li>
+						</ul>
+					</div>
 					<button>Выбрать на 1 месяц</button>
 				</article>
+				</div>
 			</div>
 		</section>
 	</main>
