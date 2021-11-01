@@ -245,7 +245,6 @@ body {
 .pricing-tarif-basic-price,
 .pricing-tarif-advanced-price,
 .pricing-tarif-full-price {
-	font-weight: normal;
 	color: #28323C;
 	font-size: 34px;
 	line-height: 72px;
