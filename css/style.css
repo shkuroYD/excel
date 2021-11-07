@@ -17,7 +17,8 @@ body {
 
 /*Определяет ширину и внешние отступы данных классов*/
 .default-container {
-	width: 888px;
+	max-width: 888px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -50,6 +51,7 @@ body {
 
 /*Логотип ренесанс-здоровье*/
 .top-menu-logo {
+	margin-top: 10px;
 	cursor: pointer;
 }
 
@@ -68,12 +70,18 @@ body {
 	color: #B5BDC8;
 	font-family: Gerbera, sans-serif;
 	font-size: 16px;
-	width: 70px;
+	text-align: right;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	appearance: none;
 }
+
+.top-menu-select:focus {
+	color: white;
+	font-size: 20px;
+}
+
 /*Цвет слов в выпадающем списке*/
 .top-menu-select option {
 	color: black;
@@ -115,6 +123,11 @@ body {
 	transition: font-size .5s;
 	cursor: pointer;
 }
+.click-suite:focus {
+	outline: none;
+	border: 1px solid #FFFFFF;
+	font-size: 20px;
+}
 
 .click-suite:hover {
 	font-size: 20px;
@@ -122,11 +135,11 @@ body {
 }
 
 /*Main*/
-
-/*Маркетинговый лозунг с пояснением*/
 .main {
 	margin-top: 72px;
 }
+
+/*Секция №1 - Маркетинговый лозунг с пояснением*/
 .slogan-title {
 	color: #28323C;
 	font-size: 34px;
@@ -141,15 +154,12 @@ body {
 	color: #78828C;
 }
 
-/*Секцтя с тарифами*/
+/*Секцтя №2 - Тарифы*/
 .pricing {
 	font-size: 16px;
 	margin-top: 120px;
 	line-height: 24px;
-}
-
-.pricing ul {
-	list-style-image:url(../img/galochka.png)
+	padding-bottom: 48px;
 }
 
 /*Блок с кнопками*/
@@ -191,13 +201,14 @@ body {
 
 .pricing-months button:focus {
 	background-color: white;
+	outline: none;
 	height: 62px;
 	border: 3px solid #00D2FF;
 	box-shadow: 0px 4px 6px rgba(26, 65, 101, 0.15);
 	border-radius: 31px;
 }
 
-/*Тарифы*/
+/*Блок с тарифами*/
 .pricing-tarif {
 	display: flex;
 	height: 432px;
@@ -211,7 +222,7 @@ body {
 
 /*Стилизация всех тарифов*/
 .pricing-tarif article {
-	width: 280px;
+	max-width: 280px;
 	border: 1px solid #E6F0FA;
 	margin: 0 auto;
 }
@@ -252,6 +263,7 @@ body {
 
 /*Стилизация списков для всех тарифов*/
 .pricing-tarif ul {
+	list-style-image:url(../img/galochka.png);
 	list-style-position: outside;
 	line-height: 24px;
 	margin-left: 24px;
@@ -274,6 +286,7 @@ body {
 
 .pricing-tarif button:focus {
 	background-color: #50287D;
+	outline: none;
 	justify-self: center;
 	height: 14%;
 	width: 97%;
@@ -282,4 +295,961 @@ body {
 	padding-left: 20px;
 	border-radius: 2px;
 	margin-left: 4px;
+}
+
+/*Секция №3 - Консультации с врачами онлайн*/
+.consultation {
+	background-color: #F3F5F7;
+	width: 100%;
+	padding: 48px 0;
+}
+
+/*Слоган - Консультации с врачами онлайн*/
+.consultation-info-slogan {
+	font-size: 34px;
+	line-height: 48px;
+	color: #28323C;
+}
+
+/*Блок с текстом, кнопкой и картинками*/
+.consultation-info-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 24px;
+	line-height: 24px;
+	font-size: 16px;
+}
+
+/*Блок с текстом и кнопкой*/
+.consultation-info-container-text {
+	width: 508px;
+}
+
+.consultation-info-container-text-advice {
+	color: #28323C;
+}
+
+.consultation-info-container-text-doctors {
+	margin-top: 24px;
+	color: #5A646E;
+}
+
+.consultation-info-container-text-description {
+	margin-top: 24px;
+	color: #28323C;
+}
+
+.consultation-info-container-text-button {
+	font-family: Gerbera, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 48px;
+	background-color: transparent;
+	color: #50287D;
+	width: 280px;
+	height: 48px;
+	border: 2px solid #50287D;
+	border-radius: 24px;
+	cursor: pointer;
+}
+
+.consultation-info-container-text-button:focus {
+	outline: none;
+	color: white;
+	background-color: #50287D;
+}
+
+/*Блок с картинками*/
+.consultation-info-container-pictures {
+	width: 356px;
+	height: 288px;
+}
+
+/*Картинка с телефоном*/
+.consultation-info-container-pictures-mobile {
+	margin-left: 152px;
+	position: absolute;
+	z-index: 1;
+}
+
+/*Картинка с доктором*/
+.consultation-info-container-pictures-doctor {
+	margin-top: 96px;
+	position: absolute;
+	z-index: 0;
+}
+
+/*Секция №4 - Преимущества (доставка, лекарств, вызов врача, антивирус*/
+.advantages {
+	background-color: #F3F5F7;
+	padding: 48px 0;
+	width: 100%;
+	border-bottom: 1px solid #D2DCE6;
+}
+
+.advantages-container {
+	display: flex;
+	justify-content: space-between;
+}
+/*Для всех article*/
+.advantages-container article {
+	width: 280px;
+}
+
+/*Блок - Доставка лекарств*/
+.advantages-container-delivery-block {
+	background-image: url(../img/advantages-delivery.png);
+	height: 216px;
+	display: flex;
+}
+
+.advantages-container-delivery-block-slogan {
+	color: white;
+	background-color: rgba(40, 50, 60, 0.65);
+	width: 100%;
+	height: 72px;
+	font-size: 18px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	margin-top: 144px;
+	cursor: pointer;
+}
+
+.advantages-container-delivery-info {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #5A646E;
+}
+.advantages-container-delivery-info a {
+	text-decoration: none;
+}
+
+/*Блок - Вызов врачей на дом*/
+.advantages-container-doctor-block {
+	background-image: url(../img/advantages-doctor.png);
+	height: 216px;
+	display: flex;
+}
+
+.advantages-container-doctor-block-slogan {
+	display: flex;
+	align-items: center;
+	background-color: rgba(40, 50, 60, 0.65);
+	height: 72px;
+	width: 100%;
+	margin-top: 144px;
+	padding-left: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	cursor: pointer;
+}
+
+.advantages-container-doctor-info {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #5A646E;
+}
+
+/*Блок - Антивирус*/
+.advantages-container-antivirus-block {
+	display: flex;
+	background-image: url(../img/advantages-antivirus.png);
+	height: 216px;
+}
+
+.advantages-container-antivirus-block-slogan {
+	display: flex;
+	align-items: center;
+	background-color: rgba(40, 50, 60, 0.65);
+	height: 72px;
+	width: 100%;
+	color: white;
+	margin-top: 144px;
+	padding-left: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	cursor: pointer;
+}
+
+.advantages-container-antivirus-info {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #5A646E;
+}
+
+/*Секция №5 - Информация*/
+.information {
+	background-color: #F3F5F7;
+	padding-bottom: 104px;
+	padding-top: 48px;
+}
+
+.information-container-slogan {
+	font-size: 18px;
+	line-height: 24px;
+	color: #28323C;
+}
+
+.information-container-description {
+	font-size: 18px;
+	line-height: 24px;
+	color: #28323C;
+}
+
+/*Табличка*/
+.information-container-info article {
+	width: 224px;
+	height: 216px;
+	padding: 24px;
+}
+
+.information-container-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 24px;
+}
+
+/*Первый столбик таблички - количество клиентов*/
+.information-container-info-clients {
+	border: 2px solid #FFFFFF;
+}
+
+.information-container-info-clients-amount {
+	margin-top: 24px;
+	font-size: 34px;
+	line-height: 48px;
+	color: #28323C;
+}
+
+.information-container-info-clients-text {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #78828C;
+}
+
+/*Второй столбик таблички - онлайн-консультации*/
+.information-container-info-online {
+	border-top: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+.information-container-info-online-amount {
+	margin-top: 24px;
+	font-size: 34px;
+	line-height: 48px;
+	color: #28323C;
+}
+
+.information-container-info-online-text {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #78828C;
+}
+
+/*Третий столбик таблички - выезд на дом*/
+.information-container-info-consultation {
+	border: 2px solid #FFFFFF;
+}
+
+.information-container-info-consultation-amount {
+	margin-top: 24px;
+	font-size: 34px;
+	line-height: 48px;
+	color: #28323C
+}
+
+.information-container-info-consultation-text {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #78828C;
+}
+
+/*Четвертый столбик таблички - врачи*/
+.information-container-info-doctors {
+	border: 2px solid #FFFFFF;
+	border-left: none;
+}
+
+.information-container-info-doctors-amount {
+	margin-top: 24px;
+	font-size: 34px;
+	line-height: 48px;
+	color: #28323C
+}
+
+.information-container-info-doctors-text {
+	margin-top: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #78828C;
+}
+
+/*Секция №6 - Инструкция "Как это работает"*/
+.instruction {
+	border-bottom: 1px solid #D2DCE6;
+	padding-bottom: 72px;
+}
+
+.instruction-container-slogan {
+	margin-top: 48px;
+	font-size: 34px;
+	line-height: 48px;
+	color: #28323C;
+}
+
+/*Блок с инструкцией и картой*/
+.instruction-container-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*Инструкция - список*/
+.instruction-container-block-list {
+	width: 409px;
+	font-size: 16px;
+	line-height: 24px;
+	list-style-type: none;
+	counter-reset: num; /*сами создаю порядковые номер у списка для их стилизации*/
+	color: #28323C;
+}
+.instruction-container-block-list li {
+	margin-top: 24px;
+}
+/*Стилизация нумерации списка*/
+.instruction-container-block-list li::before {
+	content: counter(num) '';
+	counter-increment: num;
+	display: inline-block;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+	background-color: #F3F5F7;
+	color: #00D2FF;
+}
+
+/*Карта с расположением Ренессанс страхование*/
+.instruction-container-block-map {
+	margin-top: 24px;
+	width: 432px;
+	height: 243px;
+}
+
+
+/*Секция #7 - Анкета для оформления пакета мед.помощи*/
+.form {
+	padding: 72px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.form-slogan {
+	font-size: 34px;
+	line-height: 48px;
+	color: #000000;
+}
+
+.form-container {
+	margin-top: 48px;
+	padding: 72px 0;
+	background-color: #F3F5F7;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+/*Блок с данными, согласием и кнопкой*/
+.form-container-block {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 445px;
+}
+
+/*Поля для ввода данных*/
+.type-text {
+	font-size: 20px;
+	margin-bottom: 24px;
+	height: 48px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #B5BDC8;
+	width: 431px;
+}
+.type-text::placeholder {
+	font-size: 16px;
+	line-height: 24px;
+	color: #B5BDC8;
+}
+
+.type-text:focus {
+	outline: none;
+	border-bottom: 2px solid #50287D;
+} 
+
+/*Выбор тарифа*/
+.form-container-block-select {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.form-container-block-tarif-label {
+	font-size: 11px;
+	line-height: 24px;
+	color: #B5BDC8;
+}
+
+.form-container-block-select-tarif {
+	width: 100%;
+	height: 36px;
+	font-family: Gerbera, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #28323C;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #B5BDC8;
+	appearance: none;
+	cursor: pointer;
+}
+.form-container-block-select-tarif-arrow {
+	position: relative;
+	color: #506478;
+	right: 20px;
+}
+
+.form-container-block-select-tarif option {
+	font-size: 16px;
+	line-height: 24px;
+	color: #28323C;
+	background-color: #F3F5F7;
+}
+
+.form-container-block-select-tarif:focus{
+	outline: none;
+	border-bottom: 2px solid #50287D;
+}
+
+/*Согласие*/
+.form-container-label {
+	margin-top: 36px;
+	display: flex;
+}
+
+.form-container-label-text {
+	font-size: 16px;
+	line-height: 24px;
+	cursor: pointer;
+	position: relative;
+	padding-left: 40px;
+}
+
+.form-container-label-text a {
+	text-decoration: none;
+	color: #50287D;
+}
+
+/*Скрываю классический чекбокс*/
+.form-container-label-checkbox {
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+}
+
+/*Создаю свой чекбокс вместо обычного*/
+.form-container-label-text::before {
+	content: '';
+	top: 2px;
+	left: 0;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 3px;
+	border: 2px solid #95BEF0;
+	background: transparent;
+	transition: .2s;
+}
+
+/*Стилизация чекбокса при нажатии*/
+.form-container-label-checkbox:checked + .form-container-label-text:before {
+	background-color: #50287D;
+}
+
+/*Кнопка - оформить*/
+.form-container-button {
+	margin-top: 72px;
+	background-color: #D2DCE6;
+	border-radius: 24px;
+	width: 431px;
+	height: 48px;
+	border: none;
+	font-family: Gerbera, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #96A0AA;
+	cursor: pointer;
+}
+
+.form-container-button:focus {
+	outline: none;
+	color: white;
+	background-color: #50287D;
+}
+
+/*Footer*/
+.footer {
+	margin-top: 72px;
+	background-color: #F3F5F7;
+}
+.footer-container {
+	padding: 48px 0 72px 48px;
+	font-size: 13px;
+	line-height: 24px;
+	color: #B5BDC8;
+}
+
+.footer-container-medcorp-info,
+.footer-container-doctornear-info {
+	margin-top: 24px;
+}
+
+/*Медиа-запросы*/
+@media (max-width:1024px) and (min-width:900px){
+	/*Header*/
+	.header {
+		max-height: 270px;
+	}
+	.top-menu {
+		height: 50px;
+	}
+	.hero-title {
+		margin-top: 10px;
+	}
+	.hero-description {
+		margin-top: 10px;
+	}
+	.click-suite {
+		margin-top: 25px;
+	}
+	/*Main*/
+	.main {
+		margin-top: 20px;
+	}
+	/*Секция №1 - Маркетинговый лозунг с пояснением*/
+	.slogan-description {
+		margin-top: 15px;
+	}
+	/*Секция №2 - Тарифы*/
+	.pricing {
+		margin-top: 30px;
+		padding-bottom: 20px;
+	}
+	.pricing-tarif {
+		max-height: 335px;
+		margin-top: 15px;
+	}
+	.tarif-container {
+		height: 270px;
+		margin-top: 9px;
+	}
+	.pricing-tarif ul li {
+		margin-bottom: 10px;
+	}
+	/*Cекция №3 - Консультации с врачами онлайн*/
+	.consultation {
+		padding: 20px 0;
+	}
+	.consultation-info-container {
+		margin-top: 10px;
+	}
+	.consultation-info-container-text-doctors,
+	.consultation-info-container-text-description {
+		margin-top: 10px;
+	}
+	.consultation-info-container-text-button {
+		margin-top: 20px;
+	}
+
+	.consultation-info-container-pictures-doctor {
+		margin-top: 96px;
+		height: auto;
+		width: 170px;
+	}
+	.consultation-info-container-pictures-mobile {
+		margin-left: 150px;
+		height: auto;
+		width: 170px;
+	}
+	/*Секция №4 - Преимущества (доставка, лекарств, вызов врача, антивирус*/
+	.advantages {
+		padding: 10px 0;
+	}
+	.advantages-container-delivery-info,
+	.advantages-container-doctor-info,
+	.advantages-container-antivirus-info {
+		margin-top: 10px;
+	}
+	/*Секция №5 - Информация*/
+	.information {
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+	/*Секция №6 - Инструкция "Как это работает"*/
+	.instruction {
+		padding-bottom: 20px;
+	}
+	.instruction-container-slogan {
+		margin-top: 15px;
+	}
+	.instruction-container-block-list li {
+		margin-top: 10px;
+	}
+	.instruction-container-block-map {
+		margin-top: 0;
+	}
+	/*Секция #7 - Анкета для оформления пакета мед.помощи*/
+	.form {
+		padding: 10px 0;
+	}
+	.form-container {
+		margin-top: 10px;
+		padding: 20px 0;
+	}
+	.type-text {
+		margin-bottom: 10px;
+	}
+	.form-container-label {
+		margin-top: 15px;
+	}
+	.form-container-button {
+		margin-top: 20px;
+	}
+	/*Footer*/
+	.footer {
+		margin-top: 20px;
+	}
+	.footer-container {
+		padding: 20px 0 20px 48px;
+	}
+	.footer-container-medcorp-info,
+.footer-container-doctornear-info {
+	margin-top: 10px;
+}
+}
+
+/*Медиа-запрос для айфона 5*/
+@media (max-width:320px){
+	.default-container {
+		max-width: 300px;
+	}
+	/*Header*/
+	.header {
+		max-height: 270px;
+	}
+	/*Верхняя часть header с темной полупрозрачной полосой*/
+	.top-menu {
+		height: 40px;
+	}
+	.top-menu-logo img {
+		max-width: 140px;
+	}
+	.top-menu-select {
+		max-width: 160px;
+		font-size: 16px;
+	}
+	.top-menu-select:focus {
+		color: white;
+		font-size: 16px;
+	}
+	/*Часть header с текстом и кнопкой*/
+	.hero-title {
+		font-size: 26px;
+		line-height: 26px;
+		margin-top: 10px;
+	}
+	.hero-description {
+		max-width: 300px;
+		margin-top: 15px;
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.click-suite {
+		margin-top: 15px;
+		height: 45px;
+		max-width: 200px;
+		font-size: 14px;
+	}
+	/*Main*/
+	.main {
+		margin-top: 10px;
+	}
+	/*Секция №1 - Маркетинговый лозунг с пояснением*/
+	.slogan-title {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.slogan-description {
+		max-width: 300px;
+		margin-top: 15px;
+		font-size: 18px;
+		line-height: 18px;
+	}
+	/*Секцтя №2 - Тарифы*/
+	.pricing {
+		font-size: 20px;
+		margin-top: 15px;
+		padding-bottom: 15px;
+	}
+	.pricing-months {
+		max-width: 300px;
+		max-height: 65px;
+	}
+	.pricing-months button {
+		max-width: 100px;
+	}
+	.pricing-tarif {
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.pricing-tarif article {
+		max-width: 300px;
+		margin-top: 15px;
+		height: 300px;
+	}
+	/*Блок без кнопки*/
+	.tarif-container {
+		margin: 10px 10px 0;
+		max-height: 240px;
+	}
+	.pricing-tarif-basic-slogan {
+		margin-left: 10px;
+		font-size: 18px;
+		width: 180px;
+		height: auto;
+	}
+	/*Цена тарифов*/
+	.pricing-tarif-basic-price,
+	.pricing-tarif-advanced-price,
+	.pricing-tarif-full-price {
+		color: #28323C;
+		margin: 10px 0;
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.pricing-tarif ul li {
+		margin-bottom: 10px;
+	}
+	.pricing-tarif button {
+		font-size: 20px;
+		height: 45px;
+	}
+	.pricing-tarif button:focus {
+		height: 45px;
+	}
+	/*Секция №3 - Консультации с врачами онлайн*/
+	.consultation{
+		padding: 10px 0;
+	}
+	.consultation-info-slogan {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.consultation-info-container {
+		margin-top: 15px;
+		font-size: 22px;
+		line-height: 22px;
+	}
+	.consultation-info-container-text {
+		max-width: 300px;
+	}
+	.consultation-info-container-pictures {
+		display: none;
+	}
+	.consultation-info-container-text-doctors,
+	.consultation-info-container-text-description {
+		margin-top: 15px;
+	}
+	.consultation-info-container-text-button {
+		font-size: 18px;
+		line-height: 18px;
+		margin-top: 20px;
+	}
+	/*Секция №4 - Преимущества (доставка, лекарств, вызов врача, антивирус*/
+	.advantages {
+		padding: 20px 0;
+	}
+	.advantages-container{
+		flex-direction: column;
+	}
+	.advantages-container-delivery-block-slogan {
+		font-size: 24px;
+	}
+	.advantages-container-delivery-info {
+		margin-top: 5px;
+		font-size: 20px;
+	}
+	.advantages-container-doctor {
+		margin-top: 25px;
+	}
+	.advantages-container-doctor-block-slogan {
+		font-size: 24px;
+	}
+	.advantages-container-doctor-info {
+		margin-top: 5px;
+		font-size: 20px;
+	}
+	.advantages-container-antivirus {
+		margin-top: 25px;
+	}
+	.advantages-container-antivirus-block-slogan {
+		font-size: 24px;
+	}
+	.advantages-container-antivirus-info {
+		margin-top: 5px;
+		font-size: 20px;
+	}
+	/*Секция №5 - Информация*/
+	.information {
+		padding: 15px 0;
+	}
+	.information-container-info {
+		margin-top: 0;
+		max-width: 300px;
+		flex-direction: column;
+	}
+	.information-container-info article {
+		padding: 10px;
+		width: 300px;
+		height: auto;
+		margin-top: 10px;
+		border: 2px solid #FFFFFF;
+	}
+	.information-container-info-clients-amount {
+		margin-top: 5px;
+	}
+	.information-container-info-clients-text {
+		margin-top: 10px;
+		font-size: 22px;
+	}
+	.information-container-info-online-amount {
+		margin-top: 5px;
+	}
+	.information-container-info-online-text {
+		margin-top: 10px;
+		font-size: 22px;
+	}
+	.information-container-info-consultation-amount {
+		margin-top: 5px;
+	}
+	.information-container-info-consultation-text {
+		margin-top: 10px;
+		font-size: 22px;
+	}
+	.information-container-info-doctors-amount {
+		margin-top: 5px;
+	}
+	.information-container-info-doctors-text {
+		margin-top: 10px;
+		font-size: 22px;
+	}
+	/*Секция №6 - Инструкция "Как это работает"*/
+	.instruction {
+		padding-bottom: 15px;
+	}
+	.instruction-container-slogan {
+		font-size: 26px;
+		line-height: 26px;
+		margin-top: 15px;
+	}
+	.instruction-container-block {
+		flex-direction: column;
+	}
+	.instruction-container-block-list {
+		max-width: 300px;
+		font-size: 22px;
+		line-height: 22px;
+	}
+	.instruction-container-block-list li {
+		margin-top: 15px;
+	}
+	.instruction-container-block-map {
+		margin-top: 15px;
+		width: 300px;
+		height: 200px;
+	}
+	/*Секция #7 - Анкета для оформления пакета мед.помощи*/
+	.form {
+		padding: 15px 0;
+	}
+	.form-slogan {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.form-container {
+		margin-top: 15px;
+		padding: 10px 0;
+	}
+
+	.form-container-block {
+		max-width: 300px;
+	}
+	.type-text {
+		max-width: 280px;
+		margin-bottom: 15px;
+	}
+	.type-text::placeholder {
+		font-size: 22px;
+	}
+	.form-container-block-tarif-label {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.form-container-block-select-tarif {
+		font-size: 18px;
+		height: 50px;
+		appearance: auto;
+	}
+	.form-container-block-select-tarif-arrow {
+		display: none;
+	}
+	.form-container-block-select-tarif option {
+		font-size: 18px;
+	}
+	.form-container-label {
+		margin-top: 10px;
+	}
+	.form-container-label-text {
+		font-size: 20px;
+	}
+	.form-container-button {
+		margin-left: 10px;
+		margin-top: 15px;
+		max-width: 280px;
+		height: 45px;
+		font-size: 20px;
+	}
+
+	/*Footer*/
+	.footer {
+		margin-top: 15px;
+	}
+	.footer-container {
+		padding: 15px 0;
+		font-size: 18px;
+	}
+
+	.footer-container-medcorp-info,
+.footer-container-doctornear-info {
+	margin-top: 10px;
+}
 }
